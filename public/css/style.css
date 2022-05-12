@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap');
+body{
+    font-family: 'Overpass', sans-serif;
+}
+nav{
+    /* background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%); */
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.content{
+    height: 200px;
+    align-items: center;
+}
+h1{
+    font-weight: bolder;
+}
+h1{
+    font-weight: bold;
+}
+p{
+    font-size:20px;
+    font-weight: 200;
+}
+
+.btn-create{
+    position: fixed;
+    z-index: 1;
+    bottom: -1;
+    right: 0;
+    margin-right: 19%;
+    /* margin-top: 100px; */
+   
+}
+
+/* play */
+
+.answer-containers{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1;
+}
+.score {
+    width: 30%;
+    margin: auto;
+    background-color: rgb(233, 83, 238);
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+#score-show{
+    font-size: 30px;
+    font-weight: bold;
+}

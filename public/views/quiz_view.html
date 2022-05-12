@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" />
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+  <title>G13</title>
+</head>
+
+<body>
+  <nav class="navbar position-sticky navbar-light bg-white p-3">
+    <a class="navbar-brand" href="#">
+      <img src="../image/logo-pnc.png" width="150" height="55" alt="" />
+    </a>
+    <div class="row mr-3 display-flex justify-content-between align-center">
+      <div class="col mt-1">
+        <a class="tex-bold" href="../index.html">Home</a>
+      </div>
+      <div class="col mt-1">
+        <a class="tex-bold text-center" href="list_quiz_view.html">Listquiz</a>
+      </div>
+      <div class="btn btn-primary rounded">
+        <a class="tex-bold text-white-50" href="#">Start Quiz</a>
+      </div>
+    </div>
+  </nav>
+  <!-- THEARA RIT(WEB 2022), [5/1/2022 11:35 AM] -->
+  <div class="playQuiz mt-5">
+  </div>
+  <div class="score mt-5" style="display: none;">
+    <p id="score-show"></p>
+  </div>
+</body>
+<script src="../js/quiz.js" type="module"></script>
+
+</html>
