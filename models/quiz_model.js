@@ -103,7 +103,7 @@ function updateQuiz(quiz,id){
 
   let index = quizzes.findIndex((quiz) => quiz.id==id);
   if(index !== -1){
-      if(quiz.title!=='' && quiz.question !==''&& quiz.score!=='' && quiz.corrections!==''){
+      if(quiz.title!=='' && quiz.question !==''&&  quiz.choices.length==4 && quiz.score!=='' && quiz.corrections!==''){
         quizzes[index].title = quiz.title;
         quizzes[index].question = quiz.question;
         quizzes[index].choices = quiz.choices;

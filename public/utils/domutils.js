@@ -7,7 +7,7 @@
 export function refreshDom(quizzes) {
   let container = document.getElementById("container");
   let contentQuiz = document.querySelector(".content-quiz");
-  if (quizzes.length >0) {
+  if (quizzes.length >  0) {
     contentQuiz.remove();
     // contain quiz
     let content = document.createElement("div");
@@ -86,6 +86,7 @@ export function refreshDom(quizzes) {
     });
     container.appendChild(content);
   } else {
+    contentQuiz.firstChild.remove();
     let imgDom = document.createElement("img");
     imgDom.setAttribute("src", "../image/empty.png");
     imgDom.className = "img-responsive";
@@ -153,7 +154,7 @@ export function displayAquiz(quiz) {
         index
       ].parentElement.nextElementSibling.lastElementChild.value =
         choices[index];
-      if (choices[index] === quiz.correct) {
+      if (choices[index] === quiz.correction) {
         choicesDom[index].checked = true;
       }
     }

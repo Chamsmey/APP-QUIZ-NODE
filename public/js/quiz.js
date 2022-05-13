@@ -32,7 +32,7 @@ function renderQuestion() {
         card_title.className = "card-title d-flex justify-content-between";
         card_body.appendChild(card_title);
 
-        let h2 = document.createElement("h2");
+        let h2 = document.createElement("h4");
         h2.id = "question";
         h2.textContent = question.question;
         
@@ -78,7 +78,7 @@ function checkAnswer(choice) {
     .then((response) => {
         let quizzes = response.data;
         let question = quizzes[currentQuestionIndex];
-        let correctAn = question.correct;
+        let correctAn = question.correction;
         console.log(correctAn);
         if (correctAn == choice){
             score += 1;

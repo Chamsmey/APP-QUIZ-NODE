@@ -3,7 +3,7 @@
 import { refreshDom, checkQuiz, displayAquiz,checkEditQuiz} from '../utils/domutils.js';
 // get dat and this play 
 function displayQuiz() {
-  let URL = "http://localhost:80/api/quiz";
+  let URL = "/api/quiz";
   axios.get(URL)
     .then((response) => {
       let quizzes = response.data;
@@ -17,15 +17,12 @@ function createQuiz() {
 
   let newQuiz = checkQuiz();
   console.log(newQuiz);
- axios.post("http://localhost:80/api/quiz", newQuiz)
+ axios.post("/api/quiz", newQuiz)
  .then((response) => {
    console.log(response.data);
  });
  displayQuiz();
-
-
 }
-
 /**
    * 
    * @param {*} e
@@ -46,7 +43,6 @@ function checked(e) {
 
   } else if (e.target.className === "btn-edit btn btn-primary ml-1") {
     btnUpdate.dataset.id = e.target.dataset.id;
-    btnUpdate.dataset.id = e.target.dataset.id;
     getQuizById(e.target.dataset);
   }
   else if (e.target.id === "btnUpdate") {
@@ -63,13 +59,13 @@ function checked(e) {
 
 function deleteQuiz(id) {
   let quizId = id.id;
-  axios.delete("http://localhost:80/api/quiz/" + quizId);
+  axios.delete("/api/quiz/" + quizId);
   displayQuiz();
 }
 
 function getQuizById(id) {
   let quizId = id.id;
-  axios.get("http://localhost:80/api/quiz/" + quizId)
+  axios.get("/api/quiz/" + quizId)
     .then(response => {
       displayAquiz(response.data);
     })
@@ -78,7 +74,7 @@ function updatedQuiz(e) {
   let quizUpdate = checkEditQuiz();
   console.log(quizUpdate);
   let id = e.target.dataset.id;
-  axios.patch("http://localhost:80/api/quiz/" + id, quizUpdate)
+  axios.patch("/api/quiz/" + id, quizUpdate)
   .then(response => {
     console.log(response.data);
   });
