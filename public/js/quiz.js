@@ -8,7 +8,7 @@ let currentQuestionIndex = 0;
 let score = 0;
 
 function renderQuestion() {
-    let URL = "http://localhost:80/api/quiz";
+    let URL = "/api/quiz";
 
     axios.get(URL)
       .then((response) => {
