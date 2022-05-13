@@ -73,7 +73,7 @@ function returnValue(event) {
 
 // getUserChoice();
 function checkAnswer(choice) {
-    let URL = "http://localhost:80/api/quiz";
+    let URL = "/api/quiz";
     axios.get(URL)
     .then((response) => {
         let quizzes = response.data;
@@ -102,7 +102,7 @@ function showScore() {
     hide(quiz_play);
     show(dom_score);
     // dom_score_p.textContent = score;
-    let URL = "http://localhost:80/api/quiz";
+    let URL = "/api/quiz";
     axios.get(URL).then((results) => {
     // // calculate the amount of question percent answered by the user
       let questions = results.data;
